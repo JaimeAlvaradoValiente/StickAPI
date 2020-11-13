@@ -1,0 +1,115 @@
+---
+openapi: 3.0.0
+info:
+  title: Stick API
+  description: API asociada al dispositivo del bastón
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/JaimeAlvarado/Stick/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /steps:
+    get:
+      summary: obtener el número de pasos desde el último periodo de actividad
+      description: |
+        Pasando un id del dispositivo se obtiene el número de pasos desde el último periodo de actividad
+      operationId: getSteps
+      parameters:
+      - name: idDevice
+        in: query
+        description: id del dispositivo
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: número de pasos asociados al dispositivo
+          content:
+            application/json:
+              schema:
+                type: integer
+        "400":
+          description: dispositivo incorrecto
+  /inactivity:
+    get:
+      summary: obtener el tiempo de inactividad del usuario
+      description: |
+        Pasando un id del dispositivo se obtiene el tiempo de inactividad del usuario
+      operationId: getInactivityTime
+      parameters:
+      - name: idDevice
+        in: query
+        description: id del dispositivo
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: tiempo de inactividad
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InactivityTime'
+        "400":
+          description: dispositivo incorrecto
+    put:
+      summary: actualizar el tiempo de inactividad del usuario
+      description: |
+        Actualizar el tiempo de inactividad de un determinado dispositivo
+      operationId: putInactivityTime
+      parameters:
+      - name: idDevice
+        in: query
+        description: id del dispositivo
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        description: Tiempo de inactividad a actualizar
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InactivityTime'
+        required: true
+      responses:
+        "400":
+          description: dispositivo incorrecto
+        "404":
+          description: dispositivo no encontrado
+components:
+  schemas:
+    InactivityTime:
+      required:
+      - horas
+      - minutos
+      - segundos
+      type: object
+      properties:
+        horas:
+          type: integer
+          format: int32
+          example: 7
+        minutos:
+          type: integer
+          format: int32
+          example: 32
+        segundos:
+          type: integer
+          format: int32
+          example: 33
