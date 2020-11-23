@@ -24,8 +24,8 @@ import javax.validation.constraints.*;
             return Response.serverError().entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
         }
         else {
-            System.out.println("Obteniendo pasos desde es último punto de actividad");
-            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "400")).build();
+            System.out.println("Obteniendo pasos desde es último punto de actividad del dispositivo" + idDevice);
+            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "400 pasos")).build();
         }
     }
 }
