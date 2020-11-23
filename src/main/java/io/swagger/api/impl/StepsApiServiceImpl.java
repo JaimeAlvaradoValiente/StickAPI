@@ -18,8 +18,14 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaJerseyServerCodegen", date = "2020-11-13T17:06:06.217Z[GMT]")public class StepsApiServiceImpl extends StepsApiService {
     @Override
     public Response getSteps( @NotNull Integer idDevice, SecurityContext securityContext) throws NotFoundException {
-        // do some magic!
-        // probando 
-        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
+        System.out.println("Recibiendo petición para ofrecer métricas de actividad");
+
+        if (idDevice == null) {
+            return Response.serverError().entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
+        }
+        else {
+            System.out.println("Obteniendo pasos desde es último punto de actividad");
+            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "400")).build();
+        }
     }
 }
