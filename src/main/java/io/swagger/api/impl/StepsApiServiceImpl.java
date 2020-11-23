@@ -19,6 +19,7 @@ import javax.validation.constraints.*;
     @Override
     public Response getSteps( @NotNull Integer idDevice, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
+        // probando 
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
 }
