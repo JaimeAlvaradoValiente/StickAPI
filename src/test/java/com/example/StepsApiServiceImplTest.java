@@ -15,7 +15,7 @@ import org.junit.runners.JUnit4;
  * Unit test for simple App.
  */
 @RunWith(JUnit4.class)
-public class AppTest {
+public class StepsApiServiceImplTest {
 
     @Test
     public void testApp() {
