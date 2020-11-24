@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
             return Response.status(Response.Status.BAD_REQUEST).entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
         }
         else {
-            System.out.println("Obteniendo tiempo de inactividad del usuario con el dispositivo " + idDevice);
+            System.out.println("Tiempo de inactividad del usuario con el dispositivo " + idDevice);
             InactivityTime time = new InactivityTime();
             time.setHoras(7);
             time.setHoras(20);
