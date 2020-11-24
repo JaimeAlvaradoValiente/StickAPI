@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.example.StepsApiServiceImplTest" time="2.186" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.example.StepsApiServiceImplTest" time="2.181" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.9+11"/>
+    <property name="java.vm.version" value="11.0.9.1+1"/>
     <property name="sun.boot.library.path" value="/usr/local/openjdk-11/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/projects/StickAPI"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
@@ -15,7 +15,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/projects/StickAPI"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="11.0.9+11"/>
+    <property name="java.runtime.version" value="11.0.9.1+1"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
@@ -42,26 +42,26 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -fn test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
     <property name="java.home" value="/usr/local/openjdk-11"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="11.0.9"/>
+    <property name="java.version" value="11.0.9.1"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="sun.zip.disableMemoryMapping" value="true"/>
     <property name="maven.home" value="/usr/share/maven"/>
     <property name="file.separator" value="/"/>
     <property name="java.security.egd" value="file:/dev/./urandom"/>
-    <property name="java.version.date" value="2020-10-20"/>
+    <property name="java.version.date" value="2020-11-04"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="18.9"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.example.StepsApiServiceImplTest" name="testApp" time="1.91"/>
-  <testcase classname="com.example.StepsApiServiceImplTest" name="testApp2" time="0.276"/>
+  <testcase classname="com.example.StepsApiServiceImplTest" name="testApp" time="1.906"/>
+  <testcase classname="com.example.StepsApiServiceImplTest" name="testApp2" time="0.275"/>
 </testsuite>

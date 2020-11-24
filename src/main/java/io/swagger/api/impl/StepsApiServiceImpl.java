@@ -21,12 +21,12 @@ import javax.validation.constraints.*;
         System.out.println("Recibiendo petición para ofrecer métricas de actividad");
 
         if (idDevice == null) {
+             System.out.println ("Se ha introducido un dispositibo incorrecto");
             return Response.serverError().entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
         }
         else {
-            int pasos = 30;
             System.out.println("Obteniendo pasos desde es último punto de actividad del dispositivo " + idDevice);
-            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, pasos)).build();
+            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "32")).build();
         }
     }
 }
