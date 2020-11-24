@@ -29,7 +29,7 @@ import javax.validation.constraints.*;
             System.out.println("Tiempo de inactividad del usuario con el dispositivo " + idDevice);
             InactivityTime time = new InactivityTime();
             time.setHoras(7);
-            time.setHoras(20);
+            time.setMinutos(20);
             time.setSegundos(56);
             return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, time.toString())).build();
         }
@@ -37,7 +37,15 @@ import javax.validation.constraints.*;
 
     @Override
     public Response putInactivityTime(InactivityTime body,  @NotNull Integer idDevice, SecurityContext securityContext) throws NotFoundException {
-        // do some magic!
-        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
+        if (idDevice == null || body == null) {
+            System.out.println ("Dispositivo o body incorrecto");
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
+        }
+        else {
+            System.out.println ("Actualizando tiempo de inactividad");
+            return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "Tiempo de inactividad actualizado")).build();
+        }
+
     }
+       
 }
