@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 
         if (idDevice == null) {
             System.out.println ("Se ha introducido un dispositivo incorrecto");
-            return Response.status(Response.Status.NOT_FOUND).entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
         }
         else {
             System.out.println("Obteniendo pasos desde es último punto de actividad del dispositivo " + idDevice);
