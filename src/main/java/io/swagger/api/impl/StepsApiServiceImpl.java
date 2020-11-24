@@ -21,8 +21,8 @@ import javax.validation.constraints.*;
         System.out.println("Recibiendo petición para ofrecer métricas de actividad");
 
         if (idDevice == null) {
-             System.out.println ("Se ha introducido un dispositibo incorrecto");
-            return Response.serverError().entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
+            System.out.println ("Se ha introducido un dispositivo incorrecto");
+            return Response.status(Response.Status.NOT_FOUND).entity(new ApiResponseMessage(ApiResponseMessage.ERROR, "¡Dispositivo incorrecto!")).build();
         }
         else {
             System.out.println("Obteniendo pasos desde es último punto de actividad del dispositivo " + idDevice);
