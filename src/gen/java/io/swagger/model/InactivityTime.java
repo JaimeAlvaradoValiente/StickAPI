@@ -116,12 +116,9 @@ import javax.validation.Valid;
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InactivityTime {\n");
-    
-    sb.append("    horas: ").append(toIndentedString(horas)).append("\n");
-    sb.append("    minutos: ").append(toIndentedString(minutos)).append("\n");
-    sb.append("    segundos: ").append(toIndentedString(segundos)).append("\n");
-    sb.append("}");
+    sb.append(toIndentedString(horas)).append(":");
+    sb.append(toIndentedString(minutos)).append(":");
+    sb.append(toIndentedString(segundos));
     return sb.toString();
   }
 
